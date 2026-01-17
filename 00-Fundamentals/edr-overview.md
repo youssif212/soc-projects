@@ -226,6 +226,20 @@ During the module, investigations were performed on simulated EDR detections. A 
 
 
 
+
+
+## **Career Application**
+This knowledge directly applies to SOC analyst responsibilities:
+- **Triage:** Quickly assess EDR alerts using behavioral indicators
+- **Investigation:** Use EDR telemetry to trace attack chains
+- **Response:** Execute containment actions via EDR platform
+- **Improvement:** Provide feedback to tune EDR detection rules
+
+## **Next Steps for Learning**
+- Hands-on with commercial EDR platforms (CrowdStrike, SentinelOne)
+- Practice with open-source EDR alternatives (Wazuh, Osquery)
+- Deep dive into MITRE ATT&CK framework mapping
+
 \## Conclusion
 
 
@@ -239,8 +253,4 @@ Completing the \*Introduction to EDR\* module established a strong baseline for 
 
 
 ---
-
-
-
-
 
