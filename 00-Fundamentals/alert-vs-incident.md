@@ -20,3 +20,14 @@ analyst is to analyze alerts and decide whether they are false positives or
 
 real incidents.
 
+
+## **Practical Example:**
+**Alert:** SIEM generates alert "Multiple Failed Logins from Unusual Country"
+- **Action:** Analyst investigates login attempts
+- **Finding:** Legitimate user traveling for work
+- **Verdict:** ✅ False Positive (Closed)
+
+**Incident:** EDR alerts "PowerShell Execution with Obfuscated Commands"
+- **Action:** Analyst investigates, finds living-off-the-land attack
+- **Finding:** Credential theft and lateral movement detected
+- **Verdict:** 🔴 True Positive (Escalate to Incident Response)
