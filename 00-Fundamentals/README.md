@@ -1,16 +1,27 @@
 # SOC Projects Portfolio
 
-This repository documents my hands-on learning journey in Security Operations Center (SOC) fundamentals.
+This repository documents my hands-on learning journey in Security Operations Center (SOC) fundamentals through TryHackMe and self-study.
 
 ## 📂 Contents
+**00 – Fundamentals** *(Core SOC Concepts)*
+- `SOC-overview.md` - Introduction to Security Operations Centers
+- `SOC-roles.md` - Tier 1/2/3 analyst responsibilities  
+- `alert-vs-incident.md` - Distinguishing security events
+- `EDR-overview.md` - Endpoint Detection & Response fundamentals
+- `SOC-alert-properties.md` - Alert analysis and triage workflow
 
-### 00 – Fundamentals
-- SOC overview and roles
-- Alerts vs Incidents
-- Alert lifecycle
-- EDR basics
+## 🎯 Learning Objectives
+- Build foundational SOC analyst knowledge
+- Document real-world security operations concepts
+- Develop threat detection and incident response skills
+- Create reference materials for career development
 
-Each folder contains structured notes and explanations based on real SOC concepts.
+## 🛠 Skills Demonstrated
+- Security monitoring and analysis
+- Incident classification and triage
+- EDR technology understanding
+- Documentation and knowledge management
+- Continuous learning in cybersecurity
 
-## 🎯 Goal
-Build a strong foundation for a SOC Analyst role and demonstrate continuous learning using GitHub.
+---
+*Part of my transition into cybersecurity - Documenting the journey from beginner to SOC analyst*
