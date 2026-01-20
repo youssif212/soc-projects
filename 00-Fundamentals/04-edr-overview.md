@@ -14,7 +14,7 @@ EDR solutions go beyond traditional antivirus by providing continuous visibility
 
 
 
-This document was created as part of my SOC learning journey through the TryHackMe \*Introduction to EDR\* module.
+
 
 
 
