@@ -1,155 +1,74 @@
-# SIEM Overview – SOC Fundamentals Documentation
+📘 SOC Projects Portfolio
 
-## Introduction
+This repository documents my hands-on learning journey in Security Operations Center (SOC) fundamentals through TryHackMe labs and structured self-study.
+It focuses on SOC analyst concepts, detection logic, and incident response thinking, with clear documentation suitable for entry-level SOC roles.
 
-Security Information and Event Management (SIEM) is a core technology used in a Security Operations Center (SOC). SIEM platforms collect, normalize, correlate, and analyze logs from multiple sources to detect security threats, generate alerts, and support incident response.
+📂 Contents
+00 – Fundamentals (Core SOC Concepts)
 
-This documentation demonstrates foundational understanding of SIEM concepts, detection logic, and SOC analyst workflows based on hands-on learning and simulations.
+01-SOC-overview.md
+Introduction to Security Operations Centers and their role in organizational security
 
----
+02-SOC-roles.md
+Responsibilities of SOC Tier 1, Tier 2, and Tier 3 analysts
 
-## What is SIEM?
+03-alert-vs-incident.md
+Differentiating security alerts, events, and incidents
 
-A SIEM solution aggregates logs and security events from across an organization, including endpoints, servers, network devices, and security tools. It applies correlation rules and analytics to identify suspicious or malicious activity.
+04-EDR-overview.md
+Endpoint Detection & Response fundamentals and SOC use cases
 
-### Key Functions of SIEM
+05-SOC-alert-properties.md
+Alert analysis, prioritization, and triage workflow
 
-- Centralized log collection
-- Real-time alerting
-- Correlation of events from multiple sources
-- Incident investigation and reporting
-- Compliance and audit support
+06-siem-overview.md
+Overview of Security Information and Event Management (SIEM) systems and their role in SOC operations
 
----
+07-splunk-overview.md
+Introduction to Splunk as a SIEM platform, including log ingestion, searching, and investigation concepts
 
-## Common Log Sources
+08-elastic-stack-basics.md
+Fundamentals of the Elastic Stack (Elasticsearch, Logstash, Beats, Kibana) and its use as a SIEM solution
 
-SIEM tools ingest data from various sources, such as:
+09-introduction-to-soar.md
+Introduction to Security Orchestration, Automation, and Response (SOAR), including playbooks and SOC automation concepts
 
-- Windows Event Logs (WinEventLog)
-- Linux system logs
-- Firewalls and IDS/IPS
-- Endpoint Detection and Response (EDR)
-- Authentication services (Active Directory)
-- Email security systems
+02 – TryHackMe Investigations (Applied SOC Concepts)
 
----
+10-pyramid-of-pain.md
+Analysis of the Pyramid of Pain framework, focusing on indicator effectiveness and attacker disruption
 
-## Important Windows Event Codes
+11-cyber-kill-chain.md
+Documentation of the Cyber Kill Chain framework, mapping attacker stages to SOC detection and response opportunities
 
-Some commonly monitored Windows Event IDs include:
+🎯 Learning Objectives
 
-- **4688** – Process Creation
-- **4624** – Successful Logon
-- **4625** – Failed Logon
-- **1102** – Audit Log Cleared
+Build strong foundational SOC analyst knowledge
 
-These events are critical for detecting attacker activity during different phases of an attack.
+Understand attacker behavior and detection strategies
 
----
+Develop alert triage and incident response thinking
 
-## Example SIEM Detection Rule – Command Execution (whoami)
+Translate hands-on labs into SOC-style documentation
 
-SIEM platforms use detection rules to identify suspicious behavior based on defined conditions.
+Create a professional cybersecurity portfolio for entry-level roles
 
-### Detection Logic
+🛠 Skills Demonstrated
 
-If the following conditions are met:
+Security monitoring and log analysis
 
-- **Log Source:** WinEventLog  
-- **EventCode:** 4688 (Process Creation)  
-- **NewProcessName:** Contains `whoami`
+Alert classification and triage
 
-### Rule Outcome
+SIEM concepts (Splunk & Elastic Stack)
 
-➡️ **Trigger Alert:**  
-**WHOAMI Command Execution DETECTED**
+SOAR fundamentals and response automation awareness
 
-### Why This Rule is Important
+Incident analysis using SOC frameworks
 
-- The `whoami` command is frequently used during reconnaissance
-- Helps attackers determine current user privileges
-- Commonly observed during early compromise stages
+Clear technical documentation and knowledge management
 
-### SOC Analyst Response
+Continuous learning in cybersecurity
 
-1. Identify the affected host and user
-2. Validate whether execution was legitimate
-3. Review parent and child processes
-4. Search for additional reconnaissance commands
-5. Escalate if malicious behavior is confirmed
+🚀 Career Focus
 
----
-
-## Detection of Log Clearing Activity
-
-Clearing logs is a common attacker technique used to hide evidence after a system compromise. SIEM tools can detect this behavior by monitoring event logs and network indicators.
-
-### Log Clearing Indicator
-
-- **Port:** 104  
-  This port may be associated with attempts to clear or manipulate logs, depending on the method or tool used.
-
-### Why This Matters
-
-- Indicates post-exploitation activity
-- Suggests attacker intent to cover tracks
-- High-risk behavior requiring immediate attention
-
-### SOC Analyst Action
-
-- Identify the user and host responsible
-- Confirm whether the action was authorized
-- Analyze activity before and after the event
-- Escalate if malicious intent is confirmed
-
----
-
-## Alert Lifecycle in SIEM
-
-A typical SIEM alert follows these stages:
-
-1. Alert generation
-2. Analyst triage
-3. Investigation and enrichment
-4. Classification (True Positive / False Positive)
-5. Escalation or closure
-6. Documentation and reporting
-
-Proper handling ensures efficient SOC operations and reduced alert fatigue.
-
----
-
-## SIEM vs Traditional Log Management
-
-| Feature | SIEM | Log Management |
-|------|------|---------------|
-| Real-time alerting | Yes | No |
-| Correlation rules | Yes | No |
-| Incident investigation | Yes | Limited |
-| Compliance reporting | Yes | Partial |
-
----
-
-## MITRE ATT&CK Mapping
-
-SIEM detections are commonly aligned with the MITRE ATT&CK framework:
-
-- **T1087 – Account Discovery**
-- **T1059 – Command and Scripting Interpreter**
-- **T1070 – Indicator Removal on Host**
-- **Tactic:** Discovery, Defense Evasion
-
-Mapping detections improves threat visibility and SOC maturity.
-
----
-
-## Conclusion
-
-SIEM is a foundational SOC technology that enables analysts to detect, investigate, and respond to security incidents efficiently. Understanding detection logic, event codes, and attacker behavior is essential for effective SOC operations.
-
-This documentation reflects practical SIEM knowledge gained through hands-on learning and SOC-focused training.
-
----
-
-*Created as part of my SOC learning journey using TryHackMe and foundational cybersecurity coursework.*
+This repository is part of my transition into cybersecurity, documenting the journey from beginner to SOC analyst through structured learning, hands-on labs, and professional documentation.
